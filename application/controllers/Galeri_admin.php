@@ -81,7 +81,5 @@ class Galeri_admin extends CI_Controller
     {
         $where = array('id_ikan' => $id);
         $this->Koleksi_model->hapus_data($where, 'koleksi');
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data berhasil dihapus </div>');
-        redirect('Galeri_admin');
     }
 }

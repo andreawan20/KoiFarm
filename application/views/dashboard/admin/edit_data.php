@@ -27,7 +27,7 @@
                 <label>KELAMIN</label>
                 <input type="text" name="kelamin" class="form-control" value="<?php echo $kol->kelamin ?>">
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Simpan</button>
+            <button type="submit" class="btn btn-primary mt-3">Update</button>
         </form>
     <?php endforeach; ?>
 </div>

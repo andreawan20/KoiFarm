@@ -66,5 +66,7 @@ class Koleksi_Model extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data berhasil dihapus </div>');
+        redirect('Galeri_admin');
     }
 }
