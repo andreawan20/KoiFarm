@@ -6,8 +6,17 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        $data['user'] = $this->db->get_where('user', ['email' =>
+        //title
+        $data1['title'] = 'Administrator Setup';
+        //userdata
+        $data2['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
-        echo 'Selamat datang ' . $data['user']['name'];
+
+
+        $this->load->view('dashboard/template_admin/header', $data1);
+        $this->load->view('dashboard/template_admin/sidebar');
+        $this->load->view('dashboard/template_admin/topbar', $data2);
+        $this->load->view('dashboard/index');
+        $this->load->view('dashboard/template_admin/footer');
     }
 }
